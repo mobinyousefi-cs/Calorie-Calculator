@@ -1,0 +1,29 @@
+/*
+===========================================================================
+Project: Django Calorie Calculator
+File: src/calories/static/calories/css/style.css
+Author: Mobin Yousefi (GitHub: github.com/mobinyousefi-cs)
+Created: 2025-11-01
+Updated: 2025-11-01
+License: MIT License (see LICENSE file for details)
+===========================================================================
+*/
+:root { --brand: #4f46e5; }
+.navbar-brand span { font-weight: 700; letter-spacing: .2px; }
+.btn-primary { background-color: var(--brand); border-color: var(--brand); }
+.card { border-radius: 1rem; }
+
+/* SVG (src/calories/static/calories/img/logo.svg) */
+/* Keep inline for canvas; save as separate file in repo. */
+/*
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="url(#g)"/>
+  <path d="M50 20 L58 42 L82 42 L62 56 L70 80 L50 64 L30 80 L38 56 L18 42 L42 42 Z" fill="#fff"/>
+</svg>
+*/

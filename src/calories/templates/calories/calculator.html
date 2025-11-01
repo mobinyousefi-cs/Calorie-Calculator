@@ -1,0 +1,33 @@
+<!--
+===========================================================================
+Project: Django Calorie Calculator
+Folder: src/calories/templates/calories/
+Author: Mobin Yousefi (GitHub: github.com/mobinyousefi-cs)
+Created: 2025-11-01 | Updated: 2025-11-01 | License: MIT
+===========================================================================
+-->
+<!-- calculator.html -->
+{% extends 'calories/base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="mb-3">Calorie Calculator</h3>
+        <form method="post" class="row g-3">{% csrf_token %}
+          {{ form.as_p }}
+          <div class="d-flex justify-content-end gap-2">
+            <button class="btn btn-primary" type="submit">Calculate</button>
+          </div>
+        </form>
+        {% if target %}
+        <hr/>
+        <p class="mb-1">BMR: <strong>{{ bmr }}</strong></p>
+        <p class="mb-1">TDEE: <strong>{{ tdee }}</strong></p>
+        <p class="mb-0">Recommended target: <strong>{{ target }}</strong> kcal/day</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
